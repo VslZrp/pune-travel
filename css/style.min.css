@@ -160,6 +160,7 @@ sup {
   width: 100%;
 }
 .bg img {
+  min-width: 31.25rem;
   max-width: 100%;
   position: absolute;
   top: 0;
@@ -170,6 +171,7 @@ sup {
   position: absolute;
   z-index: 2;
   width: 100%;
+  min-height: 43.75rem;
   background: linear-gradient(360deg, #000 0, rgba(0, 0, 0, 0) 100%);
 }
 h1 {
@@ -480,7 +482,6 @@ h2 {
   justify-content: space-between;
 }
 .top-footer__logo {
-  margin-top: 0.75rem;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.03rem;
@@ -595,6 +596,12 @@ h2 {
   letter-spacing: -0.0128rem;
   opacity: 0.5;
 }
+.main-footer__form input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.main-footer__form input:focus::placeholder {
+  opacity: 0;
+}
 .menu-footer {
   flex: 1 1 auto;
   display: flex;
@@ -703,6 +710,9 @@ h2 {
   transform: translate(-50%, 0);
   display: flex;
   gap: 0.5625rem;
+}
+.touch .main__scroll {
+  bottom: 10vh;
 }
 .main__scroll > * {
   transition: 0.3s;
@@ -898,6 +908,9 @@ h2 {
 @media (min-width: 768px) {
   .text-block-common {
     flex: 0 1 39.5rem;
+  }
+  .top-footer__logo {
+    margin-top: 0.75rem;
   }
   .top-footer__action {
     flex-direction: row;
@@ -1176,7 +1189,7 @@ h2 {
     padding-right: 2.75rem;
   }
   .culture {
-    padding-bottom: 6.25rem;
+    padding-bottom: 5rem;
   }
   .culture {
     padding-top: 1.875rem;
@@ -1187,10 +1200,10 @@ h2 {
 }
 @media (max-width: 767.98px) {
   .main__scroll {
-    opacity: 0.75;
+    opacity: 0.6;
   }
   .main__side {
-    opacity: 0.75;
+    opacity: 0.6;
   }
   .fort__text-block {
     max-width: 37.375rem;
@@ -1355,7 +1368,7 @@ h2 {
   .header__search {
     position: absolute;
     z-index: 50;
-    top: 95vh;
+    top: 90vh;
     left: -150%;
     transform: translate(-50%, -100%);
     transition: all 0.3s ease 0.1s;
@@ -2037,17 +2050,21 @@ h2 {
     }
   }
   @supports (
-    padding-bottom: clamp(6.25rem, 0rem + 13.0208333333vw, 15.625rem)
+    padding-bottom: clamp(5rem, -2.0833333333rem + 14.7569444444vw, 15.625rem)
   ) {
     .culture {
-      padding-bottom: clamp(6.25rem, 0rem + 13.0208333333vw, 15.625rem);
+      padding-bottom: clamp(
+        5rem,
+        -2.0833333333rem + 14.7569444444vw,
+        15.625rem
+      );
     }
   }
   @supports not (
-    padding-bottom: clamp(6.25rem, 0rem + 13.0208333333vw, 15.625rem)
+    padding-bottom: clamp(5rem, -2.0833333333rem + 14.7569444444vw, 15.625rem)
   ) {
     .culture {
-      padding-bottom: calc(6.25rem + 9.375 * (100vw - 48rem) / 72);
+      padding-bottom: calc(5rem + 10.625 * (100vw - 48rem) / 72);
     }
   }
   @supports (
