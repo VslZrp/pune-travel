@@ -160,7 +160,7 @@ sup {
   width: 100%;
 }
 .bg img {
-  min-width: 31.25rem;
+  min-width: 37.5rem;
   max-width: 100%;
   position: absolute;
   top: 0;
@@ -171,7 +171,7 @@ sup {
   position: absolute;
   z-index: 2;
   width: 100%;
-  min-height: 43.75rem;
+  min-height: 56.25rem;
   background: linear-gradient(360deg, #000 0, rgba(0, 0, 0, 0) 100%);
 }
 h1 {
@@ -586,6 +586,8 @@ h2 {
   line-height: normal;
   letter-spacing: -0.0128rem;
   opacity: 0.5;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 .main-footer__form input::placeholder {
   color: #fff;
@@ -595,6 +597,7 @@ h2 {
   line-height: normal;
   letter-spacing: -0.0128rem;
   opacity: 0.5;
+  transition: 0.3s;
 }
 .main-footer__form input:focus::-moz-placeholder {
   opacity: 0;
@@ -1389,7 +1392,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    padding: 7.5rem 0.9375rem;
+    padding: 18.5vh 0.9375rem;
     overflow: auto;
     background: #000;
     transition: 0.3s;
